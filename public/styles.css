@@ -90,3 +90,7 @@ main {
   /* setjum margin neðst, annars endar efni skyndilega */
   margin-bottom: var(--gutter);
 }
+
+.wrapper p {
+  color: hotpink;
+}
