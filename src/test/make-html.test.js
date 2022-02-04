@@ -11,7 +11,7 @@ describe('makeTemplate', () => {
       <meta charset='utf-8'>
       <meta name='viewport' content='width=device-width, initial-scale=1'>
       <title>testTitle</title>
-      <link rel='stylesheet' href='../styles.css' type='text/css'>
+      <link rel='stylesheet' href='styles.css' type='text/css'>
     </head>
     <body>
     <div class='wrapper'>
@@ -55,6 +55,7 @@ describe('makeIndex', () => {
 	it('Generate content for the apps frontpage', () => {
 		const input = makeIndex(['test', 'foo']);
 		const output = `
+		<h1>Skilaverkefni 1</h1><p>HBV403G-Vorönn 2022</p><p>Sturla Freyr Magnússon</p>
 		<ul>
 		<li><a href='test.html'>test</a></li>
 		<li><a href='foo.html'>foo</a></li>

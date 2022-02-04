@@ -39,7 +39,7 @@ export function makeIndex(files) {
     const link = `<li><a href='${element}.html'>${element}</a></li>`;
     list += link;
   });
-  return `<ul>${list}</ul>`;
+  return `<h1>Skilaverkefni 1</h1><p>HBV403G-Vorönn 2022</p><p>Sturla Freyr Magnússon</p><ul>${list}</ul>`;
 }
 export function makeTemplate(title, body) {
   return `

@@ -31,7 +31,7 @@ async function main() {
     const wrappedContent = makeTemplate(file, content);
     await writeFile(fileName, wrappedContent, { flag: 'w+' });
   }
-  const index = makeTemplate('Hæ heimur', makeIndex(files));
+  const index = makeTemplate('Skilaverkefni1-sfm1', makeIndex(files));
   await writeFile(join(OUTPUT_DIR, 'index.html'), index, { flag: 'w+' });
 }
 
