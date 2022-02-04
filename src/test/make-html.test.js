@@ -25,9 +25,9 @@ describe('makeTemplate', () => {
 
 describe('makeHTML', () => {
 	it('Writes the content for a dataset webpage', () => {
-		const input = makeHTML('H1',['688', '904', '607', '299'], ['688', '904', '607', '299']);
+		const input = makeHTML('H1',['688', '904', '607', '299'], `688 \n 904 \n 607 \n 299`);
 		const output = `
-		<h1>H1</h1>
+<h1>H1</h1>
 		<p>Frávik:62803</p>
 		<p>Hæsta gildi:904</p>
 		<p>Meðaltal:624.5</p>
@@ -42,7 +42,7 @@ describe('makeHTML', () => {
 		expect(input).toBe(output);
 	});
 	it('Reacts to an empty dataset', () => {
-		const input = makeHTML('H1',[''],[''])
+		const input = makeHTML('H1',[''],'')
 		const output = `
 		<h1>H1</h1>
 		<p>Engin nothæf gögn fundust</p>

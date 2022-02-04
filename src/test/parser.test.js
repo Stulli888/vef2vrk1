@@ -3,10 +3,10 @@ import { parse } from '../parser';
 
 describe('parse', () => {
   it('Takes in strings and sanitizes integers', () => {
-    const input = ['22 \n  3  \n  77  \n 1'];
+    const input = '22 \n  3  \n  77  \n 1';
     const output = ['22', '3', '77', '1'];
     const parsed = parse(input);
-    expect(parsed).toBe(output);
+    expect(parsed).toStrictEqual(output);
   });
 
   it('Removes whitespace from input', () => {
