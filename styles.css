@@ -1,0 +1,96 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Hámarksbreidd á efni */
+  --max-width: 1400px;
+
+  --color-text: #222;
+  --color-text-secondary: #222;
+  --color-link: #069;
+  --color-border: #ccc;
+
+  /* Letur stillingar */
+  --font-size: 16px;
+  --font-family-base: "Inter", Helvetica, Arial, sans-serif;
+  --font-family-heading: "Playfair Display", Georgia, serif;
+
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-display: swap;
+  src: url(./fonts/inter.ttf) format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-display: swap;
+  src: url(./fonts/playfair-display.ttf) format("woff");
+}
+
+body {
+  padding-top: var(--spacing);
+
+  font-size: var(--font-size);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
+}
+
+/*** Layout ***/
+
+/* Utan um allt efni, miðjar og setur breidd */
+.wrapper {
+  /* Útbýr bil á milli lóðréttra eininga */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  gap: var(--gutter);
+
+  margin: 0 auto;
+  width: calc(100% - (2 * var(--offset)));
+  max-width: var(--max-width);
+}
+
+main {
+  /* Útbýr bil á milli lóðréttra eininga */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  gap: var(--gutter);
+
+  /* setjum margin neðst, annars endar efni skyndilega */
+  margin-bottom: var(--gutter);
+}
+
+.wrapper p {
+  color: hotpink;
+}

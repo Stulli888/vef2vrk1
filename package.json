@@ -1,0 +1,30 @@
+{
+  "name": "verkefni1",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./src/build.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js",
+    "prettier": "prettier --write .",
+    "lint": "concurrently npm:lint:*",
+    "lint:eslint": "eslint ./src/**/*.js",
+    "lint:stylelint": "stylelint ./public/styles.css"
+  },
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^24.0.0"
+  },
+  "dependencies": {
+    "mathjs": "^10.1.1"
+  }
+}
